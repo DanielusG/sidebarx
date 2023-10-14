@@ -145,6 +145,7 @@ class _SidebarXState extends State<SidebarX>
                   const SizedBox(),
               if (widget.footerItems.isNotEmpty)
                 ListView.separated(
+                  shrinkWrap: true,
                   reverse: true,
                   itemCount: widget.footerItems.length,
                   separatorBuilder: widget.separatorBuilder ??
