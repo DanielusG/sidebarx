@@ -87,10 +87,10 @@ class _SidebarXState extends State<SidebarX>
     }
     widget.controller.extendStream.listen(
       (extended) {
-        if (_animationController?.isCompleted ?? false) {
-          _animationController?.reverse();
-        } else {
+        if (widget.controller.extended) {
           _animationController?.forward();
+        } else {
+          _animationController?.reverse();
         }
       },
     );
